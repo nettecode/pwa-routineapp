@@ -73,4 +73,12 @@
   }
 
   // Your custom JavaScript goes here
+  document.getElementById('create-button').addEventListener('click', function() {
+    var todoTask = document.getElementById('todo-input').value;
+    document.getElementById('todo-input').value = "";
+
+    if (todoTask) {
+      document.getElementById('todo-list').innerHTML += '<li class="mdl-list__item"><span class="mdl-list__item-primary-action"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-' + '"><input type="checkbox" id="list-checkbox-' + '" class="mdl-checkbox__input" checked /></label></span><span class="mdl-list__item-secondary-content">' + todoTask + '</span></li>';
+    }
+  });
 })();
